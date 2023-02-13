@@ -48,7 +48,13 @@ commands :
 cc -fopenmp matril_mul.c
 ./a.out
 
+Program3
+#pragma omp parallel
+#pragma omp for reduction(+:count)
 
+Execution commands(g++, not gcc)
+g++ -fopenmp sieve.cpp
+./a.out
 
 Program4
 
